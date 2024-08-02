@@ -70,9 +70,9 @@ public class Driver : User
         Console.WriteLine("Enter the license number of the driver: ");
         string licenseNumber = Console.ReadLine();
         Console.WriteLine("Enter the license category of the driver: ");
+        Console.WriteLine("1. A2  (motorbike) \n2. B1  (car) \n3. C1  (truck) \n4. C2  (bus) \n5. C3  (other)");
         string licenseCategory = Console.ReadLine();
         Console.WriteLine("Enter the driving experience of the driver: ");
-        Console.WriteLine("1. A2  (motorbike) \n2. B1  (car) \n3. C1  (truck) \n4. C2  (bus) \n5. C3  (other)");
         int drivingExperience = int.Parse(Console.ReadLine());
         Console.WriteLine("Enter the vehicle type of the driver: ");
         Console.WriteLine("1. Car \n2. Motorbike \n3. Truck \n4. Bus \n5. Other");

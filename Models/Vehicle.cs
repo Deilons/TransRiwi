@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,8 +9,9 @@ namespace TransRiwi.Models;
 public class Vehicle
 {
     // properties
+    public static int IdCounter { get; set; }=0;
 
-    public int Id { get; set; }
+    public  int Id { get;  set; }
 
     public string Plate { get; set; }
 
@@ -23,7 +25,7 @@ public class Vehicle
     
     public List<Driver> Drivers = new List<Driver>();
 
-    public Driver Owner { get; set; }
+    public static Driver Owner { get; set; }
 
     public string OwnerIdentificationNumber { get; set; }
 
@@ -31,7 +33,8 @@ public class Vehicle
     // methods
 
     public Vehicle(string plate, string typeOfVehicle, string engineNumber, string serialNumber, byte capacity, Driver owner)
-    {
+    {   
+        Id = 0;
         Plate = plate;
         TypeOfVehicle = typeOfVehicle;
         EngineNumber = engineNumber;
@@ -42,9 +45,8 @@ public class Vehicle
 
     // methods
 
-    public Vehicle CreateVehicle()
+    public static Vehicle CreateVehicle()
     {
-        int id = Id+1;
 
         Console.WriteLine("Enter the plate of the vehicle: ");
         string plate = Console.ReadLine();
@@ -64,9 +66,7 @@ public class Vehicle
         Console.WriteLine("Enter the identification number of the owner of the vehicle: ");
         string OwnerIdentificationNumber = Console.ReadLine();
 
-        Driver owner = Drivers.Find(x => x.GetIdentificationNumber() == OwnerIdentificationNumber);
-
-        
+        var owner = Administration.Drivers.Find(x => x.GetIdentificationNumber() == OwnerIdentificationNumber);
 
         Vehicle newVehicle = new Vehicle(plate, typeOfVehicle, engineNumber, serialNumber, capacity, owner);
         return newVehicle;

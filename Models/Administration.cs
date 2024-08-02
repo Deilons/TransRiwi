@@ -9,11 +9,11 @@ namespace TransRiwi.Models;
 public class Administration : IAdmistration
 {
     // colecctions for users, vehicles, drivers and customers
-    public List<Driver> Drivers { get; set; } = new List<Driver>();
+    public static List<Driver> Drivers { get; set; } = new List<Driver>();
 
-    public List<Customer> Customers { get; set; } = new List<Customer>();
+    public static List<Customer> Customers { get; set; } = new List<Customer>();
 
-    public List<Vehicle> Vehicles { get; set; } = new List<Vehicle>();
+    public static List<Vehicle> Vehicles { get; set; } = new List<Vehicle>();
 
     // methods for Drivers
 
@@ -193,7 +193,7 @@ public class Administration : IAdmistration
 
         int idToDelete = Convert.ToInt32(Console.ReadLine());
 
-        Vehicle vehicle = Vehicles.Find(x => x.Id == idToDelete);
+        var vehicle = Vehicles.Find(x => x.Id == idToDelete);
 
         if (vehicle != null)
         {
@@ -227,7 +227,7 @@ public class Administration : IAdmistration
         }
     }
 
-    // other methods
+    // filters methods
 
     public void ListOfUsers30YearsOld()
     {
@@ -306,7 +306,7 @@ Enter your choice: ");
 ║       3. Add Driver Experience                   ║
 ║       4. Show All Drivers                        ║
 ║       5. Delete Driver                           ║
-║       6. Exit                                    ║
+║       6. Go Back to Main Menu                    ║
 ║                                                  ║
 ╚══════════════════════════════════════════════════╝
 
@@ -326,7 +326,7 @@ Enter your choice: ");
 ║       2. Update Customer Membership Level        ║
 ║       3. Show All Customers                      ║
 ║       4. Delete Customer                         ║
-║       5. Exit                                    ║
+║       5. Go Back to Main Menu                    ║
 ║                                                  ║
 ╚══════════════════════════════════════════════════╝
 
@@ -343,10 +343,9 @@ Enter your choice: ");
 ║                  Vehicle Management              ║
 ║                                                  ║
 ║       1. Create Vehicle                          ║
-║       2. Update Vehicle Type                     ║
-║       3. Show All Vehicles                       ║
-║       4. Delete Vehicle                          ║
-║       5. Exit                                    ║
+║       2. Show All Vehicles                       ║
+║       3. Delete Vehicle                          ║
+║       4. Go Back to Main Menu                    ║
 ║                                                  ║
 ╚══════════════════════════════════════════════════╝
 
@@ -368,7 +367,7 @@ Enter your choice: ");
 ║       4. Drivers by Experience                   ║
 ║       5. Customer who paid with Credit Card      ║
 ║       6. All Drivers by License A2               ║
-║       7. Exit                                    ║
+║       7. Go Back to Main Menu                    ║
 ║                                                  ║
 ╚══════════════════════════════════════════════════╝
 
