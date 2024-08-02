@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace TransRiwi.Models;
 
 public class User
-{   
+{
     //properties
     protected Guid Id { get; set; }
 
@@ -28,7 +28,7 @@ public class User
 
     //constructor
 
-    protected User( string name, string lastName, string typeOfDocument, string identificationNumber, DateOnly birthDate, string email, string phoneNumber, string adress)
+    protected User(string name, string lastName, string typeOfDocument, string identificationNumber, DateOnly birthDate, string email, string phoneNumber, string adress)
     {
         Id = Guid.NewGuid();
         Name = name;
