@@ -27,7 +27,7 @@ public class Vehicle
 
     public static Driver Owner { get; set; }
 
-    public string OwnerIdentificationNumber { get; set; }
+    public string OwnerIdentificationNumber { get; set; } = "";
 
 
     // methods
@@ -49,22 +49,22 @@ public class Vehicle
     {
 
         Console.WriteLine("Enter the plate of the vehicle: ");
-        string plate = Console.ReadLine();
+        string plate = Console.ReadLine()?? "";
 
         Console.WriteLine("Enter the type of vehicle: ");
-        string typeOfVehicle = Console.ReadLine();
+        string typeOfVehicle = Console.ReadLine()?? "";
 
         Console.WriteLine("Enter the engine number of the vehicle: ");
-        string engineNumber = Console.ReadLine();
+        string engineNumber = Console.ReadLine()?? "";
 
         Console.WriteLine("Enter the serial number of the vehicle: ");
-        string serialNumber = Console.ReadLine();
+        string serialNumber = Console.ReadLine()?? "";
 
         Console.WriteLine("Enter the capacity of the vehicle: ");
-        byte capacity = byte.Parse(Console.ReadLine());
+        byte capacity = byte.Parse(Console.ReadLine()?? "");
 
         Console.WriteLine("Enter the identification number of the owner of the vehicle: ");
-        string OwnerIdentificationNumber = Console.ReadLine();
+        string OwnerIdentificationNumber = Console.ReadLine()?? "";
 
         var owner = Administration.Drivers.Find(x => x.GetIdentificationNumber() == OwnerIdentificationNumber);
 

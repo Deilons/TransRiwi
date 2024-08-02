@@ -52,31 +52,31 @@ public class Driver : User
     {
         Guid id = Guid.NewGuid();
         Console.WriteLine("Enter the name of the driver: ");
-        string name = Console.ReadLine();
+        string name = Console.ReadLine()?? "";
         Console.WriteLine("Enter the last name of the driver: ");
-        string lastName = Console.ReadLine();
+        string lastName = Console.ReadLine()?? "";
         Console.WriteLine("Enter the type of document of the driver: ");
-        string typeOfDocument = Console.ReadLine();
+        string typeOfDocument = Console.ReadLine()?? "";
         Console.WriteLine("Enter the identification number of the driver: ");
-        string identificationNumber = Console.ReadLine();
+        string identificationNumber = Console.ReadLine()?? "";
         Console.WriteLine("Enter the birth date of the driver (dd/mm/yyyy): ");
-        DateOnly birthDate = DateOnly.Parse(Console.ReadLine());
+        DateOnly birthDate = DateOnly.Parse(Console.ReadLine()?? "00/00/0000");
         Console.WriteLine("Enter the email of the driver: ");
-        string email = Console.ReadLine();
+        string email = Console.ReadLine()?? "";
         Console.WriteLine("Enter the phone number of the driver: ");
-        string phoneNumber = Console.ReadLine();
+        string phoneNumber = Console.ReadLine()?? "";;
         Console.WriteLine("Enter the adress of the driver: ");
-        string adress = Console.ReadLine();
+        string adress = Console.ReadLine()?? "";;
         Console.WriteLine("Enter the license number of the driver: ");
-        string licenseNumber = Console.ReadLine();
+        string licenseNumber = Console.ReadLine()?? "";;
         Console.WriteLine("Enter the license category of the driver: ");
         Console.WriteLine("1. A2  (motorbike) \n2. B1  (car) \n3. C1  (truck) \n4. C2  (bus) \n5. C3  (other)");
-        string licenseCategory = Console.ReadLine();
+        string licenseCategory = Console.ReadLine()?? "";;
         Console.WriteLine("Enter the driving experience of the driver: ");
-        int drivingExperience = int.Parse(Console.ReadLine());
+        int drivingExperience = int.Parse(Console.ReadLine()?? "");
         Console.WriteLine("Enter the vehicle type of the driver: ");
         Console.WriteLine("1. Car \n2. Motorbike \n3. Truck \n4. Bus \n5. Other");
-        string vehicletype = Console.ReadLine();
+        string vehicletype = Console.ReadLine()?? "";
 
         Driver newDriver = new Driver(name, lastName, typeOfDocument, identificationNumber, birthDate, email, phoneNumber, adress, licenseNumber, licenseCategory, drivingExperience, vehicletype);
 

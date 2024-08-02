@@ -11,13 +11,13 @@ while (isRunning)
 
     administration.MajorMenu();
 
-    string choice = Console.ReadLine();
+    string choice = Console.ReadLine()??"0";
 
     switch (choice)
     {
         case "1":
             administration.MenuDriver();
-            string driverChoice = Console.ReadLine();
+            string driverChoice = Console.ReadLine()??"0";
             switch (driverChoice)
             {
                 case "1":
@@ -56,7 +56,7 @@ while (isRunning)
             break;
         case "2":
             administration.MenuCustomer();
-            string customerChoice = Console.ReadLine();
+            string customerChoice = Console.ReadLine()??"0";
             switch (customerChoice)
             {
                 case "1":
@@ -90,7 +90,7 @@ while (isRunning)
             break;
         case "3":
             administration.MenuVehicle();
-            string vehicleChoice = Console.ReadLine();
+            string vehicleChoice = Console.ReadLine()??"0";
             switch (vehicleChoice)
             {
                 case "1":
@@ -119,7 +119,7 @@ while (isRunning)
             break;
         case "4":
             administration.MenuFilter();
-            string filterChoice = Console.ReadLine();
+            string filterChoice = Console.ReadLine()??"0";
             switch (filterChoice)
             {
                 case "1":

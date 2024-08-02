@@ -27,7 +27,7 @@ public class Administration : IAdmistration
     {
         Console.WriteLine("Enter the identification number of the driver you want to delete: ");
 
-        string identificationNumber = Console.ReadLine();
+        string? identificationNumber = Console.ReadLine();
 
         Driver driver = Drivers.Find(x => x.GetIdentificationNumber() == identificationNumber);
 
@@ -37,7 +37,7 @@ public class Administration : IAdmistration
             driver.ShowDriverDetails();
             Console.WriteLine("Are you sure you want to delete it? (y/n)");
 
-            string answer = Console.ReadLine();
+            string? answer = Console.ReadLine();
 
             if (answer == "y")
             {
@@ -59,7 +59,7 @@ public class Administration : IAdmistration
     {
         Console.WriteLine("Enter the identification number of the driver you want to update: ");
 
-        string identificationNumber = Console.ReadLine();
+        string? identificationNumber = Console.ReadLine();
 
         Driver driver = Drivers.Find(x => x.GetIdentificationNumber() == identificationNumber);
 
@@ -69,7 +69,7 @@ public class Administration : IAdmistration
             driver.ShowDriverDetails();
             Console.WriteLine("Enter the new license category: ");
             Console.WriteLine("1. A2  (motorbike) \n2. B1  (car) \n3. C1  (truck) \n4. C2  (bus) \n5. C3  (other)");
-            string licenseCategory = Console.ReadLine();
+            string? licenseCategory = Console.ReadLine();
             driver.UpdateLicenseCategory(licenseCategory);
             Console.WriteLine("License category updated");
         }
@@ -83,7 +83,7 @@ public class Administration : IAdmistration
     {
         Console.WriteLine("Enter the identification number of the driver you want to update: ");
 
-        string identificationNumber = Console.ReadLine();
+        string? identificationNumber = Console.ReadLine();
 
         Driver driver = Drivers.Find(x => x.GetIdentificationNumber() == identificationNumber);
 
@@ -120,7 +120,7 @@ public class Administration : IAdmistration
     {
         Console.WriteLine("Enter the identification number of the customer you want to delete: ");
 
-        string identificationNumber = Console.ReadLine();
+        string? identificationNumber = Console.ReadLine();
 
         Customer customer = Customers.Find(x => x.GetIdentificationNumber() == identificationNumber);
 
@@ -130,7 +130,7 @@ public class Administration : IAdmistration
             customer.ShowCustomerDetails();
             Console.WriteLine("Are you sure you want to delete it? (y/n)");
 
-            string answer = Console.ReadLine();
+            string? answer = Console.ReadLine();
 
             if (answer == "y")
             {
@@ -152,7 +152,7 @@ public class Administration : IAdmistration
     {
         Console.WriteLine("Enter the identification number of the customer you want to update: ");
 
-        string identificationNumber = Console.ReadLine();
+        string? identificationNumber = Console.ReadLine();
 
         Customer customer = Customers.Find(x => x.GetIdentificationNumber() == identificationNumber);
 
@@ -162,7 +162,7 @@ public class Administration : IAdmistration
             Console.WriteLine("Customer found");
             customer.ShowCustomerDetails();
             Console.WriteLine("Enter the new membership level: ");
-            string membershipLevel = Console.ReadLine();
+            string? membershipLevel = Console.ReadLine();
             customer.UpdateMembershipLevel(membershipLevel);
             Console.WriteLine("Membership level updated");
         }
@@ -201,7 +201,7 @@ public class Administration : IAdmistration
             vehicle.ShowVehicleDetails();
             Console.WriteLine("Are you sure you want to delete it? (y/n)");
 
-            string answer = Console.ReadLine();
+            string? answer = Console.ReadLine();
 
             if (answer == "y")
             {
