@@ -20,7 +20,9 @@ public class Vehicle
     public string SerialNumber { get; set; }
 
     public byte Capacity { get; set; }
+    
     public List<Driver> Drivers = new List<Driver>();
+
     public Driver Owner { get; set; }
 
     public string OwnerIdentificationNumber { get; set; }

@@ -179,4 +179,44 @@ public class Administration
         }
     }
 
+    // methods for vehicles
+
+    public void AddVehicle(Vehicle newVehicle)
+    {
+        Vehicles.Add(newVehicle);
+    }
+
+    public void DeleteVehicle()
+    {
+        Console.WriteLine("Enter the id of the vehicle you want to delete: ");
+
+        int idToDelete = Convert.ToInt32(Console.ReadLine());
+
+        Vehicle vehicle = Vehicles.Find(x => x.Id == idToDelete);
+
+        if (vehicle != null)
+        {
+            Console.WriteLine("Vehicle found");
+            vehicle.ShowVehicleDetails();
+            Console.WriteLine("Are you sure you want to delete it? (y/n)");
+
+            string answer = Console.ReadLine();
+
+            if (answer == "y")
+            {   
+                Vehicles.Remove(vehicle);
+                Console.WriteLine("Vehicle deleted");
+            }
+            else
+            {
+                Console.WriteLine("Vehicle not deleted");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Vehicle not found");
+        }
+    }
+
+
 }
