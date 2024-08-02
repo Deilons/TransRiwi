@@ -218,5 +218,13 @@ public class Administration
         }
     }
 
+    public void ShowAllVehicles()
+    {
+        foreach (Vehicle vehicle in Vehicles)
+        {
+            vehicle.ShowVehicleDetails();
+        }
+    }
+
 
 }
