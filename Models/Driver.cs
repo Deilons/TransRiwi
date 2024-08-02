@@ -26,6 +26,24 @@ public class Driver : User
 
     // methods
 
+    public void ShowDriverDetails()
+    {
+        Console.WriteLine($@"
+        Id : {Id}
+        Name : {Name}
+        LastName : {LastName}
+        TypeOfDocument : {TypeOfDocument}
+        IdentificationNumber : {IdentificationNumber}
+        BirthDate : {BirthDate}
+        Email : {Email}
+        PhoneNumber : {PhoneNumber}
+        Adress : {Adress}
+        LicenseNumber : {LicenseNumber}
+        LicenseCategory : {LicenseCategory}
+        DrivingExperience : {DrivingExperience}
+        ");
+    }
+
     public void UpdateLicenseCategory(string NewlicenseCategory)
     {
         LicenseCategory = NewlicenseCategory;

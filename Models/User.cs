@@ -68,4 +68,11 @@ public class User
         Console.WriteLine($"Age : {CalculateAge()}");
     }
 
+    // publics methods
+
+    public string GetIdentificationNumber()
+    {
+        return IdentificationNumber;
+    } 
+
 }
