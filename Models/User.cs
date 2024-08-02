@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 
 namespace TransRiwi.Models;
@@ -60,7 +61,8 @@ public class User
 
     protected int CalculateAge()
     {
-        return DateTime.Now.Year - BirthDate.Year;
+        int age = DateTime.Now.Year - BirthDate.Year;
+        return age;
     }
 
     protected void ShowAge()
@@ -73,6 +75,11 @@ public class User
     public string GetIdentificationNumber()
     {
         return IdentificationNumber;
-    } 
+    }
+
+    public string GetAge()
+    {
+        return CalculateAge().ToString();
+    }
 
 }

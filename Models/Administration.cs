@@ -227,5 +227,18 @@ public class Administration : IAdmistration
         }
     }
 
+    // other methods
+
+    // lista de usuarios mayores de 30 años
+    public void ListOfUsers30YearsOld()
+    {
+        foreach (Driver driver in Drivers)
+        {
+            if (driver.GetAge() > 30)
+            {
+                driver.ShowDriverDetails();
+            }
+        }
+    }
 
 }
