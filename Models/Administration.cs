@@ -101,4 +101,50 @@ public class Administration
         }
     }
 
+    public void ShowAllDrivers()
+    {
+        foreach (Driver driver in Drivers)
+        {
+            driver.ShowDriverDetails();
+        }
+    }
+
+    // methods for Customers
+    public void AddCustomer(Customer newCustomer)
+    {
+        Customers.Add(newCustomer);
+    }
+
+    public void DeleteCustomer()
+    {
+        Console.WriteLine("Enter the identification number of the customer you want to delete: ");
+
+        string identificationNumber = Console.ReadLine();
+
+        Customer customer = Customers.Find(x => x.GetIdentificationNumber() == identificationNumber);
+
+        if (customer != null)
+        {
+            Console.WriteLine("Customer found");
+            customer.ShowCustomerDetails();
+            Console.WriteLine("Are you sure you want to delete it? (y/n)");
+
+            string answer = Console.ReadLine();
+
+            if (answer == "y")
+            {
+                Customers.Remove(customer);
+                Console.WriteLine("Customer deleted");
+            }
+            else
+            {
+                Console.WriteLine("Customer not deleted");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Customer not found");
+        }
+    }
+
 }

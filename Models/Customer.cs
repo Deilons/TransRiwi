@@ -63,6 +63,23 @@ public class Customer : User
         return newCustomer;
     }
 
+    public void ShowCustomerDetails()
+    {
+        Console.WriteLine($@"
+        Id : {Id}
+        Name : {Name}
+        LastName : {LastName}
+        TypeOfDocument : {TypeOfDocument}
+        IdentificationNumber : {IdentificationNumber}
+        BirthDate : {BirthDate}
+        Email : {Email}
+        PhoneNumber : {PhoneNumber}
+        Adress : {Adress}
+        MembershipLevel : {MembershipLevel}
+        PreferredPaymentMethod : {PreferredPaymentMethod}
+        ");
+    }
+
     public void UpdateMembershipLevel(string NewMembershipLevel)
     {
         MembershipLevel = NewMembershipLevel;
