@@ -77,9 +77,9 @@ public class User
         return IdentificationNumber;
     }
 
-    public string GetAge()
+    public int GetAge()
     {
-        return CalculateAge().ToString();
+        return CalculateAge();
     }
 
 }

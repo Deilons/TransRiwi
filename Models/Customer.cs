@@ -47,6 +47,7 @@ public class Customer : User
         Console.WriteLine("Enter the membership level of the customer: ");
         string membershiplevel = Console.ReadLine();
         Console.WriteLine("Enter the preferred payment method of the customer: ");
+        Console.WriteLine("1. Cash \n2. Credit Card \n3. Debit Card");
         string preferredpaymentMethod = Console.ReadLine();
         Customer newCustomer = new Customer(name, lastName, typeOfDocument, identificationNumber, birthDate, email, phoneNumber, adress, membershiplevel, preferredpaymentMethod);
         return newCustomer;

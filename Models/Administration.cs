@@ -229,12 +229,41 @@ public class Administration : IAdmistration
 
     // other methods
 
-    // lista de usuarios mayores de 30 años
     public void ListOfUsers30YearsOld()
     {
         foreach (Driver driver in Drivers)
         {
-            if (driver.GetAge() > 30)
+            if ( driver.GetAge() > 30)
+            {
+                driver.ShowDriverDetails();
+            }
+        }
+    }
+
+    public void DrivesByExperienceDescending()
+    {
+        foreach (Driver driver in Drivers)
+        {
+            driver.ShowDriverDetails();
+        }
+    }
+    
+    public void CustomerWhoPaidWithCreditCard()
+    {
+        foreach (Customer customer in Customers)
+        {
+            if (customer.PreferredPaymentMethod == "Credit Card")
+            {
+                customer.ShowCustomerDetails();
+            }
+        }
+    }
+
+    public void DriversByLicenseA2()
+    {
+        foreach (Driver driver in Drivers)
+        {
+            if (driver.LicenseCategory == "A2")
             {
                 driver.ShowDriverDetails();
             }
