@@ -16,9 +16,9 @@ public class Administration
 
     // methods for Drivers
 
-    public void AddDriver(Driver driver)
+    public void AddDriver(Driver newDriver)
     {
-        Drivers.Add(driver);
+        Drivers.Add(newDriver);
     }
 
     //

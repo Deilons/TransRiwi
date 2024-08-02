@@ -44,6 +44,7 @@ public class Driver : User
         LicenseNumber : {LicenseNumber}
         LicenseCategory : {LicenseCategory}
         DrivingExperience : {DrivingExperience}
+        VehicleType : {VehicleType}
         ");
     }
 
@@ -73,6 +74,7 @@ public class Driver : User
         Console.WriteLine("Enter the driving experience of the driver: ");
         int drivingExperience = int.Parse(Console.ReadLine());
         Console.WriteLine("Enter the vehicle type of the driver: ");
+        Console.WriteLine("1. Car \n2. Motorbike \n3. Truck \n4. Bus \n5. Other");
         string vehicletype = Console.ReadLine();
 
         Driver newDriver = new Driver(name, lastName, typeOfDocument, identificationNumber, birthDate, email, phoneNumber, adress, licenseNumber, licenseCategory, drivingExperience, vehicletype);

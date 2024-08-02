@@ -24,6 +24,45 @@ public class Customer : User
 
     // methods
 
+    public Customer CreateCustomer()
+    {
+        Guid id = Guid.NewGuid();
+
+        Console.WriteLine("Enter the name of the customer: ");
+        string name = Console.ReadLine();
+
+        Console.WriteLine("Enter the last name of the customer: ");
+        string lastName = Console.ReadLine();
+
+        Console.WriteLine("Enter the type of document of the customer: ");
+        string typeOfDocument = Console.ReadLine();
+
+        Console.WriteLine("Enter the identification number of the customer: ");
+        string identificationNumber = Console.ReadLine();
+
+        Console.WriteLine("Enter the birth date of the customer (dd/mm/yyyy): ");
+        DateOnly birthDate = DateOnly.Parse(Console.ReadLine());
+
+        Console.WriteLine("Enter the email of the customer: ");
+        string email = Console.ReadLine();
+
+        Console.WriteLine("Enter the phone number of the customer: ");
+        string phoneNumber = Console.ReadLine();
+
+        Console.WriteLine("Enter the adress of the customer: ");
+        string adress = Console.ReadLine();
+
+        Console.WriteLine("Enter the membership level of the customer: ");
+        string membershiplevel = Console.ReadLine();
+
+        Console.WriteLine("Enter the preferred payment method of the customer: ");
+        string preferredpaymentMethod = Console.ReadLine();
+
+        Customer newCustomer = new Customer(name, lastName, typeOfDocument, identificationNumber, birthDate, email, phoneNumber, adress, membershiplevel, preferredpaymentMethod);
+
+        return newCustomer;
+    }
+
     public void UpdateMembershipLevel(string NewMembershipLevel)
     {
         MembershipLevel = NewMembershipLevel;
