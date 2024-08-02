@@ -147,4 +147,36 @@ public class Administration
         }
     }
 
+    public void UpdateCustomerMembershipLevel()
+    {
+        Console.WriteLine("Enter the identification number of the customer you want to update: ");
+
+        string identificationNumber = Console.ReadLine();
+
+        Customer customer = Customers.Find(x => x.GetIdentificationNumber() == identificationNumber);
+
+        if (customer != null)
+
+        {
+            Console.WriteLine("Customer found");
+            customer.ShowCustomerDetails();
+            Console.WriteLine("Enter the new membership level: ");
+            string membershipLevel = Console.ReadLine();
+            customer.UpdateMembershipLevel(membershipLevel);
+            Console.WriteLine("Membership level updated");
+        }
+        else
+        {
+            Console.WriteLine("Customer not found");
+        }
+    }
+
+    public void ShowAllCustomers()
+    {
+        foreach (Customer customer in Customers)
+        {
+            customer.ShowCustomerDetails();
+        }
+    }
+
 }
