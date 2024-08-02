@@ -19,7 +19,8 @@ public interface IAdmistration
 ║       1. Driver Management                       ║
 ║       2. Customer Management                     ║
 ║       3. Vehicle Management                      ║
-║       4. Exit                                    ║
+║       4. Filters                                 ║
+║       5. Exit                                    ║
 ║                                                  ║
 ╚══════════════════════════════════════════════════╝
 
@@ -81,6 +82,28 @@ Enter your choice: ");
 ║       3. Show All Vehicles                       ║
 ║       4. Delete Vehicle                          ║
 ║       5. Exit                                    ║
+║                                                  ║
+╚══════════════════════════════════════════════════╝
+
+Enter your choice: ");
+    }
+
+    public void menuFilter()
+    {
+        Console.Clear();
+        Console.WriteLine(
+    @"
+╔══════════════════════════════════════════════════╗
+║                                                  ║
+║                      Filters                     ║
+║                                                  ║
+║       1. Show All Customers                      ║
+║       2. Show All Drivers                        ║
+║       3. Drivers older than 30 years             ║
+║       4. Drivers by Experience                   ║
+║       5. Customer who paid with Credit Card      ║
+║       6. All Drivers by License A2               ║
+║       7. Exit                                    ║
 ║                                                  ║
 ╚══════════════════════════════════════════════════╝
 
