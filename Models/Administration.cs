@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TransRiwi.Interfaces;
 
 namespace TransRiwi.Models;
 
-public class Administration
+public class Administration : IAdmistration
 {
     // colecctions for users, vehicles, drivers and customers
     public List<Driver> Drivers { get; set; } = new List<Driver>();
