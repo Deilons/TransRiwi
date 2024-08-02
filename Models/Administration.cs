@@ -53,4 +53,52 @@ public class Administration
             Console.WriteLine("Driver not found");
         }
     }
+
+    public void UpdateDriverLicenseCategory()
+    {
+        Console.WriteLine("Enter the identification number of the driver you want to update: ");
+
+        string identificationNumber = Console.ReadLine();
+
+        Driver driver = Drivers.Find(x => x.GetIdentificationNumber() == identificationNumber);
+
+        if (driver != null)
+        {
+            Console.WriteLine("Driver found");
+            driver.ShowDriverDetails();
+            Console.WriteLine("Enter the new license category: ");
+            Console.WriteLine("1. A2  (motorbike) \n2. B1  (car) \n3. C1  (truck) \n4. C2  (bus) \n5. C3  (other)");
+            string licenseCategory = Console.ReadLine();
+            driver.UpdateLicenseCategory(licenseCategory);
+            Console.WriteLine("License category updated");
+        }
+        else
+        {
+            Console.WriteLine("Driver not found");
+        }
+    }
+
+    public void AddDriverExperience()
+    {
+        Console.WriteLine("Enter the identification number of the driver you want to update: ");
+
+        string identificationNumber = Console.ReadLine();
+
+        Driver driver = Drivers.Find(x => x.GetIdentificationNumber() == identificationNumber);
+
+        if (driver != null)
+        {
+            Console.WriteLine("Driver found");
+            driver.ShowDriverDetails();
+            Console.WriteLine("Enter the years of experience: ");
+            int years = Convert.ToInt32(Console.ReadLine());
+            driver.AddExperience(years);
+            Console.WriteLine("Experience added");
+        }
+        else
+        {
+            Console.WriteLine("Driver not found");
+        }
+    }
+
 }
